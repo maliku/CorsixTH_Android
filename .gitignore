@@ -1,0 +1,7 @@
+out
+bin
+gen
+*.swp
+local.properties
+obj
+libs/armeabi*

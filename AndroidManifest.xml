@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dreamdance.th"
+    android:installLocation="preferExternal"
+    android:versionCode="16"
+    android:versionName="0.6.5dev" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+
+    <supports-screens
+            android:xlargeScreens="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:smallScreens="false" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppTheme" 
+        android:hardwareAccelerated="true">
+        <activity
+            android:name="uk.co.armedpineapple.corsixth.SDLActivity"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation">
+        </activity>
+        <activity
+            android:name="uk.co.armedpineapple.corsixth.wizard.WizardActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="uk.co.armedpineapple.corsixth.PrefsActivity" >
+        </activity>
+        <meta-data android:value="4fb9b8ad527015057300001a" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="open" android:name="UMENG_CHANNEL"/>
+    </application>
+
+</manifest>
